@@ -14,6 +14,9 @@ public class CanalSyncService {
         return CanalConnectors.newSingleConnector(new InetSocketAddress(ip,port),destination,"","");
     }
 
+    public static CanalConnector createZkCanalConnect(String ZKServers,String destination){
+        return CanalConnectors.newClusterConnector(ZKServers,destination,"","");
+    }
 
     public static void printEntry(List<CanalEntry.Entry> entrys) {
         for (CanalEntry.Entry entry : entrys) {
