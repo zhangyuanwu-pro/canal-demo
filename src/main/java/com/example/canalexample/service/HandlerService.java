@@ -41,7 +41,7 @@ public class HandlerService implements ApplicationContextAware,InitializingBean 
         int batchSize = 100;
         CanalConnector cananlConnector=null;
         try {
-            cananlConnector = CanalSyncService.createCanalConnect("172.19.177.120", 2181, "example");
+            cananlConnector = CanalSyncService.createZkCanalConnect("172.19.177.120:2181", "example");
             cananlConnector.connect();
             cananlConnector.subscribe("my_test.user");
             while (true) {
