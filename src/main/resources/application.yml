@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: 172.19.177.120:9300
+      cluster-name: docker-cluster
+      repositories:
+        enabled: true
+
+logging:
+  level:
+    root: info
+
+
